@@ -21,36 +21,39 @@ There are three components to Ethernaut that are needed to run/deploy in order t
 
 In order to install, build, and run Ethernaut locally, follow these instructions:
 
-0. Be sure to use a compatible Node version. If you use `nvm` you can run `nvm use` at the root level to be sure to select a compatible version.
 
-1. Clone the repo and install dependencies:
+Use `https://www.youtube.com/watch?v=XXz6zelbjvM` as reference to run things locally
+
+1. Be sure to use a compatible Node version. If you use `nvm` you can run `nvm use` at the root level to be sure to select a compatible version.
+
+2. Clone the repo and install dependencies:
 
     ```bash
     git clone git@github.com:OpenZeppelin/ethernaut.git
     yarn install
     ```
 
-2. Start deterministic rpc
+3. Start deterministic rpc
 
     ```bash
     yarn network
     ```
 
-3. Import one of the private keys from the ganache-cli output to your Metamask wallet.
-4. Compile contracts
+4. Import one of the private keys from the ganache-cli output to your Metamask wallet.
+5. Compile contracts
 
     ```bash
     yarn compile:contracts
     ```
 
-5. Set `client/src/constants.js` `ACTIVE_NETWORK` to `NETWORKS.LOCAL`
-6. Deploy contracts
+6. Set `client/src/constants.js` `ACTIVE_NETWORK` to `NETWORKS.LOCAL`
+7. Deploy contracts
 
     ```bash
     yarn deploy:contracts
     ```
 
-7. Start Ethernaut locally
+8. Start Ethernaut locally
 
     ```bash
     yarn start:ethernaut
