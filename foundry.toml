@@ -1,0 +1,4 @@
+[anvil]
+mnemonic = "test test test test test test test test test test test junk"
+accounts = 10
+balance = "10000ether"
