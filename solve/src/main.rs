@@ -5,6 +5,7 @@ mod solutions;
 #[tokio::main]
 async fn main() -> Result<()> {
     // solutions::fallback::solution_fallback().await?;
+    solutions::fallout::solution_fallout().await?;
 
     Ok(())
 }
