@@ -1,0 +1,25 @@
+[package]
+name = "solve"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+alloy = { version = "0.14", features = [
+    "eips",
+    "full",
+    "json-rpc",
+    "node-bindings",
+    "rpc-client",
+    "rpc-types-debug",
+    "rpc-types-trace",
+    "signer-aws",
+    "signer-gcp",
+    "signer-keystore",
+    "signer-ledger",
+    "signer-mnemonic",
+    "signer-trezor",
+    "signer-yubihsm",
+] }
+alloy-primitives = "1.0.0"
+eyre = "0.6.12"
+tokio = { version = "1", features = ["full"] }
