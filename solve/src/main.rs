@@ -5,7 +5,8 @@ mod solutions;
 #[tokio::main]
 async fn main() -> Result<()> {
     // solutions::fallback::solution_fallback().await?;
-    solutions::fallout::solution_fallout().await?;
+    // solutions::fallout::solution_fallout().await?;
+    solutions::coin_flip::solution_coin_flip().await?;
 
     Ok(())
 }

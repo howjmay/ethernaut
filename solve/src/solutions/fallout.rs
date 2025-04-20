@@ -6,7 +6,7 @@ use eyre::Result;
 sol!(
     #[allow(missing_docs)]
     #[sol(rpc)]
-    Fallback,
+    Fallout,
     "../client/src/contracts/out/Fallout.sol/Fallout.json"
 );
 
@@ -16,7 +16,7 @@ pub async fn solution_fallout() -> Result<()> {
         ProviderBuilder::new().on_anvil_with_wallet_and_config(|anvil| anvil.fork(rpc_url))?;
     let accounts = provider.get_accounts().await?;
 
-    let contract = Fallback::deploy(&provider).await?;
+    let contract = Fallout::deploy(&provider).await?;
     println!("contract.address(): {}", contract.address());
 
     let contract_owner = contract.owner().call().await?;
