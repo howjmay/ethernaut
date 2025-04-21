@@ -42,8 +42,8 @@ pub async fn solution_coin_flip() -> Result<()> {
             break;
         }
 
-        let flip_call = contract.flip(target_contract.address().clone());
-        let calldata = flip_call.calldata().to_owned();
+        let call_builder = contract.flip(target_contract.address().clone());
+        let calldata = call_builder.calldata().to_owned();
         let tx = TransactionRequest::default()
             .from(accounts[1])
             .to(contract.address().clone())

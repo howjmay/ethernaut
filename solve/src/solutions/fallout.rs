@@ -22,8 +22,8 @@ pub async fn solution_fallout() -> Result<()> {
     let contract_owner = contract.owner().call().await?;
     println!("contract_owner is {contract_owner}");
 
-    let set_value_call = contract.Fal1out();
-    let calldata = set_value_call.calldata().to_owned();
+    let call_builder = contract.Fal1out();
+    let calldata = call_builder.calldata().to_owned();
     let tx = TransactionRequest::default()
         .from(accounts[1])
         .to(contract.address().clone())

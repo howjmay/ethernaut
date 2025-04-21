@@ -28,8 +28,8 @@ pub async fn solution_telephone() -> Result<()> {
     let target_contract = Telephone::deploy(&provider).await?;
     let contract = TelephoneHack::deploy(&provider).await?;
 
-    let flip_call = contract.changeOwner(target_contract.address().clone());
-    let calldata = flip_call.calldata().to_owned();
+    let call_builder = contract.changeOwner(target_contract.address().clone());
+    let calldata = call_builder.calldata().to_owned();
     let tx = TransactionRequest::default()
         .from(accounts[1])
         .to(contract.address().clone())

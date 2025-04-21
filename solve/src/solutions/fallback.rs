@@ -28,8 +28,8 @@ pub async fn solution_fallback() -> Result<()> {
 
     let sent_val = parse_ether("0.00009").unwrap();
 
-    let set_value_call = contract.contribute();
-    let calldata = set_value_call.calldata().to_owned();
+    let call_builder = contract.contribute();
+    let calldata = call_builder.calldata().to_owned();
     let tx = TransactionRequest::default()
         .from(accounts[1])
         .to(contract.address().clone())
